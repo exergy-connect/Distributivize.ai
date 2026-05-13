@@ -7,6 +7,8 @@
 
 Both are aimed at helping developers migrate existing compute workloads to the Distributive Compute Protocol (DCP), but they are installed and used differently.
 
+Repository: <https://github.com/exergy-connect/Distributivize.ai>
+
 The CLI follows the core workflow:
 
 1. analyze existing source code
@@ -23,15 +25,15 @@ Use this section when you want to install the Cursor AI skills. These skills do 
 Run from your project root:
 
 ```bash
-bash <(curl -fsSL https://exergy-connect.github.io/xFrame.ai/install-skills.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/exergy-connect/Distributivize.ai/main/install_cursor.sh)
 ```
 
-This installs both skills into `.cursor/skills/` and records the installed suite version.
+This installs the `distributivize` AI skill into `$HOME/.cursor/skills/distributivize` and records the installed suite version.
 
 To check the installed version later:
 
 ```bash
-bash <(curl -fsSL https://exergy-connect.github.io/xFrame.ai/install-skills.sh) --check
+bash <(curl -fsSL https://raw.githubusercontent.com/exergy-connect/Distributivize.ai/main/install_cursor.sh) --check
 ```
 
 ### Local distributivize skill installer

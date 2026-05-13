@@ -3,7 +3,7 @@
 
 set -e
 
-REPO="https://github.com/exergy-connect/distributivize.git"
+REPO="https://github.com/exergy-connect/Distributivize.ai.git"
 SKILLS=("skills/distributivize")
 TARGET="$HOME/.cursor/skills"
 VERSION_URL="https://exergy-connect.github.io/distributivize/latest"
