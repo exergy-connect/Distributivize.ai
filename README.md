@@ -9,7 +9,35 @@ It follows the core workflow:
 3. produce a DCP suitability report
 4. generate starter DCP wrapper scaffolding
 
-## Install and Run
+## Install Notes
+
+### Install script (recommended)
+
+Run from your project root:
+
+```bash
+bash <(curl -fsSL https://exergy-connect.github.io/xFrame.ai/install-skills.sh)
+```
+
+This installs both skills into `.cursor/skills/` and records the installed suite version.
+
+To check the installed version later:
+
+```bash
+bash <(curl -fsSL https://exergy-connect.github.io/xFrame.ai/install-skills.sh) --check
+```
+
+### Local distributivize skill installer
+
+This repository also includes a standalone installer for the `distributivize` skill:
+
+```bash
+bash install_cursor.sh
+```
+
+It installs the skill into `$HOME/.cursor/skills/distributivize` and records the version in `$HOME/.cursor/skills/.distributivize-latest`.
+
+## CLI Install and Run
 
 ```bash
 npm install
