@@ -1,15 +1,22 @@
 # distributivize
 
-`distributivize` is a prototype developer tool for migrating existing JavaScript, Python, and Mojo compute workloads to the Distributive Compute Protocol (DCP).
+`distributivize` includes two related but distinct pieces:
 
-It follows the core workflow:
+- **AI skills for Cursor**: reusable assistant instructions that help analyze workloads, reason about DCP suitability, and guide migrations.
+- **CLI prototype**: a local TypeScript analyzer that scans JavaScript, Python, and Mojo projects, writes suitability reports, and generates DCP wrapper scaffolding.
+
+Both are aimed at helping developers migrate existing compute workloads to the Distributive Compute Protocol (DCP), but they are installed and used differently.
+
+The CLI follows the core workflow:
 
 1. analyze existing source code
 2. identify distributable regions
 3. produce a DCP suitability report
 4. generate starter DCP wrapper scaffolding
 
-## Install Notes
+## AI Skills Install Notes
+
+Use this section when you want to install the Cursor AI skills. These skills do not install the `distributivize` CLI command; they make the assistant better at reviewing code, explaining DCP tradeoffs, and planning migrations.
 
 ### Install script (recommended)
 
@@ -29,7 +36,7 @@ bash <(curl -fsSL https://exergy-connect.github.io/xFrame.ai/install-skills.sh) 
 
 ### Local distributivize skill installer
 
-This repository also includes a standalone installer for the `distributivize` skill:
+This repository also includes a standalone installer for only the `distributivize` AI skill:
 
 ```bash
 bash install_cursor.sh
@@ -38,6 +45,8 @@ bash install_cursor.sh
 It installs the skill into `$HOME/.cursor/skills/distributivize` and records the version in `$HOME/.cursor/skills/.distributivize-latest`.
 
 ## CLI Install and Run
+
+Use this section when you want the local command-line analyzer. The CLI is separate from the Cursor AI skills and requires Node.js.
 
 ```bash
 npm install
