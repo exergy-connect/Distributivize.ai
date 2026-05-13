@@ -6,7 +6,7 @@ set -e
 REPO="https://github.com/exergy-connect/Distributivize.ai.git"
 SKILLS=("skills/distributivize")
 TARGET="$HOME/.cursor/skills"
-VERSION_URL="https://exergy-connect.github.io/distributivize/latest"
+VERSION_URL="https://raw.githubusercontent.com/exergy-connect/Distributivize.ai/main/latest"
 
 # --check flag: compare versions only
 if [ "$1" = "--check" ]; then
