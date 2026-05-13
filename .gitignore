@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.distributivize/
+samples/.distributivize/
+npm-debug.log*
