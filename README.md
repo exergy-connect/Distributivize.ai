@@ -25,7 +25,7 @@ Use this section when you want to install the Cursor AI skills. These skills do 
 Run from your project root:
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/exergy-connect/Distributivize.ai/main/install_cursor.sh)
+bash <(curl -fsSL "https://raw.githubusercontent.com/exergy-connect/Distributivize.ai/main/install_cursor.sh?$(date +%s)")
 ```
 
 This installs the `distributivize` AI skill into `$HOME/.cursor/skills/distributivize` and records the installed suite version.
@@ -33,7 +33,7 @@ This installs the `distributivize` AI skill into `$HOME/.cursor/skills/distribut
 To check the installed version later:
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/exergy-connect/Distributivize.ai/main/install_cursor.sh) --check
+bash <(curl -fsSL "https://raw.githubusercontent.com/exergy-connect/Distributivize.ai/main/install_cursor.sh?$(date +%s)") --check
 ```
 
 ### Local distributivize skill installer

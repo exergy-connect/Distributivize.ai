@@ -8,9 +8,13 @@ SKILLS=("skills/distributivize")
 TARGET="$HOME/.cursor/skills"
 VERSION_URL="https://raw.githubusercontent.com/exergy-connect/Distributivize.ai/main/latest"
 
+fetch_latest_version() {
+  curl -fsSL "$VERSION_URL?$(date +%s)"
+}
+
 # --check flag: compare versions only
 if [ "$1" = "--check" ]; then
-  LATEST=$(curl -fsSL "$VERSION_URL")
+  LATEST=$(fetch_latest_version)
   LOCAL=$(cat "$TARGET/.distributivize-latest" 2>/dev/null || echo "not installed")
   echo "Installed: $LOCAL — Latest: $LATEST"
   [ "$LOCAL" = "$LATEST" ] && echo "Up to date." || echo "Update available. Re-run without --check to install."
@@ -38,7 +42,7 @@ for SKILL in "${SKILLS[@]}"; do
 done
 
 # Record installed version
-SUITE_VERSION=$(curl -fsSL "$VERSION_URL")
+SUITE_VERSION=$(fetch_latest_version)
 
 echo "$SUITE_VERSION" > "$TARGET/.distributivize-latest"
 
